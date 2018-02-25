@@ -1,0 +1,7 @@
+echo starat
+node FinancingItems.js
+node ContractFinancingItems.js
+node FinancingItemClassifications.js
+node FinancingItemMeasurementUnits.js
+node FinancingItemAttributeSummaries.js
+echo end
