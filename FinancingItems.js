@@ -139,10 +139,8 @@ async function fetchdata(offset) {
 
 async function elasticFinanceItemBulkInsert(index, type, financeItems) {
     let bulk = []
-    let action = { index: { _index: index, _type: type } }
-
     financeItems.forEach(item => {
-        action.index._id = item.FinancingItemId
+        let action = { index: { _index: index, _type: type, _id: item.FinancingItemId } }
         item.FinancingItemClassifications = []
         item.FinancingItemMeasurementUnits = []
         item.FinancingItemAttributeSummaries = []

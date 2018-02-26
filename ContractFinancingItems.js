@@ -72,8 +72,6 @@ async function fetchdata(offset) {
 
 async function elasticFinanceItemBulkInsert(index, type, data) {
     let bulk = []
-    
-    
 
     data.forEach(item => {
         let action = { update : {_id : item.FinancingItemId, "_type" : "financeitems", "_index" : "financeitems"} }
